@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mushfiqur Rahman Tahmid | Applied Statistics & Data Science</title>
+<style>
+:root{--bg:#0a0d14;--card:#121826;--line:#1f2937;--text:#e6edf6;--muted:#8b98ab;--accent:#2dd4bf;--accent2:#60a5fa;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+background-image:radial-gradient(800px 400px at 80% -5%,rgba(45,212,191,.12),transparent),radial-gradient(600px 400px at -10% 30%,rgba(96,165,250,.08),transparent)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(10,13,20,.8);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-weight:700;letter-spacing:.5px}.logo b{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;padding:0;font-size:14px;color:var(--muted)}
+nav ul a:hover{color:var(--accent)}
+@media(max-width:600px){nav ul{gap:13px;font-size:13px}.logo{display:none}}
+.hero{padding:96px 0 70px}
+.tag{display:inline-block;font:13px ui-monospace,Menlo,monospace;color:var(--accent);border:1px solid rgba(45,212,191,.35);padding:5px 12px;border-radius:99px;margin-bottom:22px}
+h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.1;letter-spacing:-1px}
+h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:1.2rem;color:var(--muted);margin:14px 0 18px}
+.bio{max-width:620px;color:#b7c2d3}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{padding:11px 22px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--line);transition:.2s}
+.btn.p{background:var(--accent);color:#04201c;border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+section{padding:64px 0}
+h2{font-size:1.7rem;margin-bottom:30px;display:flex;align-items:center;gap:14px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.25s}
+.card:hover{border-color:rgba(45,212,191,.5);transform:translateY(-3px)}
+.card h3{font-size:1.1rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.chip{font:12px ui-monospace,Menlo,monospace;color:var(--accent2);background:rgba(96,165,250,.1);padding:4px 10px;border-radius:6px}
+.link{display:inline-block;margin-top:14px;color:var(--accent);font-size:14px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.skills h3{font-size:.8rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:4px}
+.tl{border-left:2px solid var(--line);padding-left:24px;display:grid;gap:26px}
+.tl>div{position:relative}
+.tl>div::before{content:"";position:absolute;left:-31px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--bg)}
+.tl h3{font-size:1.05rem}.tl .when{font:13px ui-monospace,Menlo,monospace;color:var(--accent);margin:2px 0 6px}
+.tl p{color:var(--muted);font-size:15px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px}
+.cols h4{margin-bottom:22px;font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px}
+form{display:grid;gap:12px}
+input,textarea{width:100%;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--text);font:inherit}
+input:focus,textarea:focus{outline:none;border-color:var(--accent)}
+textarea{min-height:120px;resize:vertical}
+button.btn{cursor:pointer;font:inherit;font-weight:600}
+.links{display:grid;gap:12px;align-content:start}
+.links a{display:flex;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 16px;transition:.2s}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:38px 0}
+.empty{color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<script>
+/* ==========================================================
+   EDIT THIS BLOCK ONLY. Everything on the page is built from it.
+   Lines starting with "Sample" are placeholders: replace them.
+   ========================================================== */
+const CONFIG = {
+  name: "Mushfiqur Rahman Tahmid",
+  shortName: "Tahmid",
+  tagline: "Applied Statistics & Data Science Student",
+  university: "University of Dhaka",
+  gradYear: "2029",
+  bio: "Sample bio: I'm a student of Applied Statistics and Data Science at the University of Dhaka. I enjoy turning messy data into clear answers, and I'm building skills in statistical modelling, machine learning, and data storytelling.",
+  email: "your.email@example.com",
+  resumeUrl: "",               // paste a link to your CV, or leave empty to hide the button
+  accentColor: "#2dd4bf",      // try #60a5fa (blue), #a78bfa (purple), #f59e0b (amber)
+  links: [
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/mushfiqur-rahman-tahmid-39924b389/" },
+    { label: "GitHub",   url: "" },   // e.g. https://github.com/yourname
+    { label: "Kaggle",   url: "" }
+  ],
+  projects: [
+    { name: "Sample Project: Exploratory Data Analysis",
+      desc: "Replace with what the project does and what you found, ideally with one concrete result.",
+      tools: ["Python", "pandas", "Matplotlib"], url: "" },
+    { name: "Sample Project: Regression Modelling",
+      desc: "Replace with your own statistical modelling or machine learning project.",
+      tools: ["R", "ggplot2"], url: "" },
+    { name: "Sample Project: Dashboard",
+      desc: "Replace with a dashboard, survey analysis, or report you have made.",
+      tools: ["SQL", "Tableau"], url: "" }
+  ],
+  skills: {
+    "Languages": ["Python", "R", "SQL", "C", "C++"],
+    "Libraries & Tools": ["Tidyverse","pandas", "NumPy", "scikit-learn", "matplotlib", "Jupyter", "Git"],
+    "Statistics": ["Probability", "Regression", "Hypothesis Testing", "Data Visualization"]
+  },
+  experience: [
+    { title: "Sample: Your role or club", org: "Organisation", when: "2025 – Present",
+      desc: "Replace with one line on what you did. Delete this entry if you have none yet." }
+  ],
+  education: [
+    { title: "BSc in Applied Statistics & Data Science", org: "University of Dhaka", when: "2025 – 2029 (expected)",
+      desc: "Add relevant courses, GPA, or honours if you like." }
+  ]
+};
+</script>
+
+<nav><div class="wrap">
+  <a href="#top" class="logo" id="logo"></a>
+  <ul><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#background">Background</a></li><li><a href="#contact">Contact</a></li></ul>
+</div></nav>
+
+<header class="wrap hero" id="top">
+  <div class="tag" id="tag"></div>
+  <h1 id="h1"></h1>
+  <p class="sub" id="sub"></p>
+  <p class="bio" id="bio"></p>
+  <div class="btns" id="btns"></div>
+</header>
+
+<main class="wrap">
+  <section id="projects"><h2>Projects</h2><div class="grid" id="projGrid"></div></section>
+  <section id="skills"><h2>Skills</h2><div class="skills" id="skillGrid"></div></section>
+  <section id="background"><h2>Background</h2>
+    <div class="cols"><div><h4>Experience</h4><div class="tl" id="exp"></div></div>
+    <div><h4>Education</h4><div class="tl" id="edu"></div></div></div>
+  </section>
+  <section id="contact"><h2>Get in touch</h2>
+    <div class="cols">
+      <form id="form">
+        <input id="fn" placeholder="Your name" required>
+        <input id="fe" type="email" placeholder="Your email" required>
+        <textarea id="fm" placeholder="Your message" required></textarea>
+        <button class="btn p" type="submit">Send message</button>
+      </form>
+      <div class="links" id="links"></div>
+    </div>
+  </section>
+</main>
+<footer id="foot"></footer>
+
+<script>
+const C = CONFIG;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+document.documentElement.style.setProperty("--accent", C.accentColor);
+
+$("logo").innerHTML = esc(C.shortName) + "<b>.</b>";
+$("tag").textContent = C.university + " · Class of " + C.gradYear;
+const parts = C.name.split(" ");
+$("h1").innerHTML = "Hi, I'm <span>" + esc(C.name) + "</span>";
+$("sub").textContent = C.tagline;
+$("bio").textContent = C.bio;
+
+let b = '<a class="btn p" href="#projects">View my work</a><a class="btn" href="#contact">Contact me</a>';
+if (C.resumeUrl) b += '<a class="btn" target="_blank" rel="noopener" href="' + esc(C.resumeUrl) + '">Resume</a>';
+$("btns").innerHTML = b;
+
+$("projGrid").innerHTML = C.projects.length ? C.projects.map(p =>
+  '<div class="card"><h3>' + esc(p.name) + '</h3><p>' + esc(p.desc) + '</p>' +
+  '<div class="chips">' + (p.tools || []).map(t => '<span class="chip">' + esc(t) + '</span>').join("") + '</div>' +
+  (p.url ? '<a class="link" target="_blank" rel="noopener" href="' + esc(p.url) + '">View project →</a>' : '') + '</div>'
+).join("") : '<p class="empty">Projects coming soon.</p>';
+
+$("skillGrid").innerHTML = Object.entries(C.skills).map(([k, v]) =>
+  '<div><h3>' + esc(k) + '</h3><div class="chips">' + v.map(s => '<span class="chip">' + esc(s) + '</span>').join("") + '</div></div>'
+).join("");
+
+const tl = a => a.length ? a.map(e =>
+  '<div><h3>' + esc(e.title) + '</h3><div class="when">' + esc(e.org) + ' · ' + esc(e.when) + '</div><p>' + esc(e.desc) + '</p></div>'
+).join("") : '<p class="empty">Nothing here yet.</p>';
+$("exp").innerHTML = tl(C.experience);
+$("edu").innerHTML = tl(C.education);
+
+const L = C.links.filter(l => l.url).map(l =>
+  '<a target="_blank" rel="noopener" href="' + esc(l.url) + '"><span>' + esc(l.label) + '</span><span>↗</span></a>');
+L.unshift('<a href="mailto:' + esc(C.email) + '"><span>' + esc(C.email) + '</span><span>✉</span></a>');
+$("links").innerHTML = L.join("");
+
+$("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const body = $("fm").value + "\n\nFrom: " + $("fn").value + " (" + $("fe").value + ")";
+  location.href = "mailto:" + C.email + "?subject=" + encodeURIComponent("Portfolio message from " + $("fn").value) + "&body=" + encodeURIComponent(body);
+});
+$("foot").textContent = "© " + new Date().getFullYear() + " " + C.name;
+</script>
+</body>
+</html>
